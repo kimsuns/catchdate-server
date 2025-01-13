@@ -6,6 +6,7 @@ const moimRoutes = require("./routes/moimRoutes.js");
 
 dotenv.config();
 
+// const DATABASE_URL = process.env.DATABASE_URL;
 const DATABASE_URL = process.env.DATABASE_URL;
 
 const app = express();
