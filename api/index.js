@@ -7,7 +7,7 @@ const moimRoutes = require("./routes/moimRoutes.js");
 dotenv.config();
 
 // const DATABASE_URL = process.env.DATABASE_URL;
-const DATABASE_URL = process.env.DATABASE_URL;
+const DATABASE_URL = process.env.MONGODB_URI;
 
 const app = express();
 // const port = process.env.PORT || 3001;
@@ -44,6 +44,11 @@ app.use("/api/moim", moimRoutes);
 // API 엔드포인트
 app.get("/", (req, res) =>
   res.send("Hello 코뚱핑! 캐치데이트의 서버가 잘 동작합니다.")
+);
+
+// moim 엔드포포인트
+app.get("/api/moim", (req, res) =>
+  res.send("Hello 코뚱핑! 모임 서버가 잘 동작합니다.")
 );
 
 module.exports = app;
